@@ -1,0 +1,217 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f6f7f4">
+  <title>Fieldnote — Quotes & invoices, made simple</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="landing.css">
+  <script src="app.js" defer></script>
+  <script src="landing.js" defer></script>
+</head>
+<body>
+  <svg class="icon-sprite" xmlns="http://www.w3.org/2000/svg">
+    <symbol id="i-grid" viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></symbol>
+    <symbol id="i-file" viewBox="0 0 24 24"><path d="M6 3h8l4 4v14H6z"/><path d="M14 3v5h5M9 13h6M9 17h6"/></symbol>
+    <symbol id="i-users" viewBox="0 0 24 24"><circle cx="9" cy="8" r="3"/><path d="M3 20v-1a6 6 0 0 1 12 0v1M16 5a3 3 0 0 1 0 6M18 14a5 5 0 0 1 3 5v1"/></symbol>
+    <symbol id="i-settings" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.7 1.7 0 0 0 .34 1.88l.06.06-1.6 2.77-.08-.02a1.7 1.7 0 0 0-1.79.65l-.05.07h-3.2l-.03-.08a1.7 1.7 0 0 0-1.6-1.06 1.7 1.7 0 0 0-1.6 1.06l-.03.08h-3.2l-.05-.07a1.7 1.7 0 0 0-1.79-.65l-.08.02-1.6-2.77.06-.06A1.7 1.7 0 0 0 3.5 15l-.09-.02v-3.2l.09-.03a1.7 1.7 0 0 0 .34-1.88l-.06-.06 1.6-2.77.08.02a1.7 1.7 0 0 0 1.79-.65l.05-.07h3.2l.03.08a1.7 1.7 0 0 0 3.2 0l.03-.08h3.2l.05.07a1.7 1.7 0 0 0 1.79.65l.08-.02 1.6 2.77-.06.06a1.7 1.7 0 0 0 .34 1.88l.09.03v3.2z" transform="translate(0 -1.5)"/></symbol>
+    <symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M14 7l5 5-5 5"/></symbol>
+    <symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m16 16 4 4"/></symbol>
+    <symbol id="i-chevron" viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12 4 4L19 6"/></symbol>
+    <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></symbol>
+    <symbol id="i-send" viewBox="0 0 24 24"><path d="m21 3-7.5 18-3.2-7.3L3 10.5zM10.3 13.7 21 3"/></symbol>
+    <symbol id="i-download" viewBox="0 0 24 24"><path d="M12 3v12m-5-5 5 5 5-5M4 17v3h16v-3"/></symbol>
+    <symbol id="i-trash" viewBox="0 0 24 24"><path d="M4 7h16M9 7V4h6v3m3 0-1 13H7L6 7m4 4v5m4-5v5"/></symbol>
+    <symbol id="i-close" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18"/></symbol>
+    <symbol id="i-spark" viewBox="0 0 24 24"><path d="m12 2 1.8 6.2L20 10l-6.2 1.8L12 18l-1.8-6.2L4 10l6.2-1.8zM19 16l.7 2.3L22 19l-2.3.7L19 22l-.7-2.3L16 19l2.3-.7z"/></symbol>
+  </svg>
+
+  <div id="public-home" class="public-home">
+    <header>
+      <div class="landing-header">
+      <a class="brand landing-brand" href="#public-home" aria-label="Fieldnote home"><span class="brand-mark"><span></span><span></span><span></span></span><span>fieldnote<span class="brand-dot">.</span></span></a>
+      <nav class="landing-nav" aria-label="Website navigation">
+        <a href="#how-it-works">How it works</a>
+        <a href="#pricing" id="pricing-link">Pricing</a>
+        <button type="button" class="landing-login" data-account-preview="login">Log in</button>
+        <button type="button" class="button button-dark" data-account-preview="signup">Sign up <svg><use href="#i-arrow"/></svg></button>
+      </nav>
+      </div>
+      <div class="landing-header-ad"><div class="ad-space" data-ad-slot="public-header" aria-label="Public header advertisement placeholder"><span>ADVERTISEMENT</span><strong>Header ad space</strong><small>Available when hosted</small></div></div>
+    </header>
+    <main>
+      <div id="home-content">
+      <section class="landing-hero">
+        <div class="hero-copy">
+          <div class="landing-eyebrow"><span>✦</span> MADE FOR THE WORK YOU DO</div>
+          <h1>Good work deserves <em>great paperwork.</em></h1>
+          <p>Make clean, professional quotes and invoices without losing your day to admin. Get back to the work that matters.</p>
+          <div class="hero-actions">
+            <button type="button" class="button button-dark landing-primary" data-open-workspace>Try the local workspace <svg><use href="#i-arrow"/></svg></button>
+            <a class="landing-secondary" href="#how-it-works">See how it works <span>↓</span></a>
+          </div>
+          <div class="hero-note"><span>✓</span> No account needed for the local preview</div>
+        </div>
+        <div class="hero-visual" aria-hidden="true">
+          <div class="hero-orbit hero-orbit-one"></div><div class="hero-orbit hero-orbit-two"></div>
+          <div class="sample-document">
+            <div class="sample-top"><span class="sample-logo">f.</span><span>QUOTE<br><small>NO. 001</small></span></div>
+            <div class="sample-rule"></div>
+            <div class="sample-label">PREPARED FOR</div><strong>Good work, made official.</strong>
+            <div class="sample-lines"><span></span><span></span><span></span></div>
+            <div class="sample-total"><span>QUOTE STATUS</span><strong>Ready to send</strong></div>
+            <div class="sample-thanks">Thank you for your business.</div>
+          </div>
+          <div class="hero-stamp">READY TO GO <span>✓</span></div>
+          <span class="hero-spark">✳</span>
+        </div>
+      </section>
+      <section id="how-it-works" class="landing-section">
+        <div class="landing-section-heading"><div><div class="landing-eyebrow">A LITTLE LESS ADMIN</div><h2>From first hello to job well done.</h2></div><p>Simple tools for the people who keep things running.</p></div>
+        <div class="feature-grid">
+          <article class="feature-card"><span class="feature-number">01</span><h3>Make it yours</h3><p>Add your business details and logo, choose a design and currency, and create a quote or invoice.</p></article>
+          <article class="feature-card"><span class="feature-number">02</span><h3>Get it out the door</h3><p>Save your document as a PDF or JPEG and share the details with your customer.</p></article>
+          <article class="feature-card"><span class="feature-number">03</span><h3>Keep work moving</h3><p>Track document statuses, reuse customers and services, and turn a quote into an invoice.</p></article>
+        </div>
+      </section>
+      </div>
+      <section id="pricing" class="landing-section pricing-section" hidden>
+        <div class="landing-section-heading"><div><div class="landing-eyebrow">SIMPLE, HONEST PRICING</div><h2>Start small. Grow from there.</h2></div><p>The local workspace is available to try today.</p></div>
+        <div class="pricing-grid">
+          <article class="pricing-card"><span class="pricing-label">FREE · AVAILABLE NOW</span><h3>$0 <small>/ month</small></h3><p>For getting your paperwork in order.</p><ul><li>5 new quotes and 5 new invoices each month</li><li>PDF and JPEG export</li><li>Five document designs</li><li>Created with Fieldnote branding</li></ul><button type="button" class="button button-dark" data-open-workspace>Try the local workspace</button></article>
+          <article class="pricing-card pricing-planned"><span class="pricing-label">UNLIMITED · PLANNED</span><h3>$12 CAD <small>/ month</small></h3><p>A proposed plan for when you're ready for more.</p><ul><li>Unlimited quotes and invoices</li><li>Online payment options planned</li><li>Account and cloud sync planned</li></ul><span class="planned-note">Subscriptions and payments are not available yet.</span></article>
+        </div>
+      </section>
+    </main>
+    <footer class="landing-footer">
+      <div class="footer-ad-grid public-footer-ads" aria-label="Public footer advertisement placeholders">
+        <div class="ad-space footer-ad" data-ad-slot="public-footer-1" aria-label="Public footer advertisement placeholder 1"><span>ADVERTISEMENT</span><strong>Footer ad 1</strong><small>Available when hosted</small></div>
+        <div class="ad-space footer-ad" data-ad-slot="public-footer-2" aria-label="Public footer advertisement placeholder 2"><span>ADVERTISEMENT</span><strong>Footer ad 2</strong><small>Available when hosted</small></div>
+        <div class="ad-space footer-ad" data-ad-slot="public-footer-3" aria-label="Public footer advertisement placeholder 3"><span>ADVERTISEMENT</span><strong>Footer ad 3</strong><small>Available when hosted</small></div>
+      </div>
+      <div class="landing-footer-content"><span>fieldnote<span class="brand-dot">.</span></span><p>Made for people who make things happen.</p><button type="button" class="landing-login" data-account-preview="login">Log in</button></div>
+    </footer>
+  </div>
+
+  <dialog id="account-preview" class="account-preview" aria-labelledby="account-preview-title" aria-describedby="account-preview-description">
+    <button type="button" class="account-close" aria-label="Close account preview">×</button>
+    <div class="landing-eyebrow">FIELDNOTE ACCOUNT · PREVIEW</div>
+    <h2 id="account-preview-title">Welcome back.</h2>
+    <p id="account-preview-description">Accounts aren't connected yet. This is a preview of the login screen.</p>
+    <div class="account-fields">
+      <label>Email address<input type="email" placeholder="you@yourbusiness.com" disabled></label>
+      <label>Password<input type="password" placeholder="••••••••" disabled></label>
+    </div>
+    <button type="button" class="button button-dark account-unavailable" disabled>Account setup coming soon</button>
+    <p class="account-switch"><span id="account-switch-copy">New to Fieldnote?</span> <button type="button" class="text-button" id="account-switch">Preview sign up</button></p>
+    <div class="account-divider">OR</div>
+    <button type="button" class="button button-outline account-local" data-open-workspace>Continue to local workspace</button>
+    <small>Your existing documents stay on this device. No account or cloud sync is active.</small>
+  </dialog>
+
+  <div class="app-shell" hidden>
+    <aside class="sidebar">
+      <a class="brand" href="#" aria-label="Fieldnote home"><span class="brand-mark"><span></span><span></span><span></span></span><span>fieldnote<span class="brand-dot">.</span></span></a>
+      <div class="workspace-label">YOUR WORKSPACE <span>✦</span></div>
+      <nav class="navigation" aria-label="Main navigation">
+        <button class="nav-link active" data-view="overview"><svg><use href="#i-grid"/></svg> Overview</button>
+        <button class="nav-link" data-view="documents"><svg><use href="#i-file"/></svg> Documents <span id="nav-count" class="nav-count">0</span></button>
+        <button class="nav-link" data-view="customers"><svg><use href="#i-users"/></svg> Customers</button>
+        <button class="nav-link" data-view="services"><svg><use href="#i-file"/></svg> Saved services</button>
+        <button class="nav-link" data-view="settings"><svg><use href="#i-settings"/></svg> Business settings</button>
+      </nav>
+      <div class="sidebar-ads" aria-label="Sidebar advertisement placeholders">
+        <div class="ad-space sidebar-ad" data-ad-slot="left-1" aria-label="Left advertisement placeholder 1"><span>ADVERTISEMENT</span><strong>Sidebar ad 1</strong><small>Available when hosted</small></div>
+        <div class="ad-space sidebar-ad" data-ad-slot="left-2" aria-label="Left advertisement placeholder 2"><span>ADVERTISEMENT</span><strong>Sidebar ad 2</strong><small>Available when hosted</small></div>
+      </div>
+      <div class="sidebar-bottom">
+        <div class="side-card"><div class="side-card-icon"><svg><use href="#i-spark"/></svg></div><strong>Good work deserves<br>great paperwork.</strong><p>A little less admin. A lot more doing what you do best.</p></div>
+        <button class="profile-button" data-view="settings"><span class="profile-avatar" id="profile-avatar">Y</span><span class="profile-copy"><strong id="profile-name">Your business</strong><small>Local workspace</small></span><svg><use href="#i-chevron"/></svg></button>
+      </div>
+    </aside>
+
+    <main class="main-content">
+      <header class="topbar"><div class="breadcrumb">Workspace <span>/</span> <strong id="breadcrumb-current">Overview</strong></div><div class="topbar-right"><button type="button" class="workspace-home" data-open-home>Home</button><span class="local-pill"><span></span> Saved on this device</span><button class="top-avatar" data-view="settings" id="top-avatar" aria-label="Business settings">Y</button></div></header>
+      <div class="header-ad-wrap"><div class="ad-space header-ad" data-ad-slot="header" aria-label="Header advertisement placeholder"><span>ADVERTISEMENT</span><strong>Header ad space</strong><small>Available when hosted</small></div></div>
+      <div class="workspace-layout">
+      <div class="page-content">
+        <section id="overview-view" class="view">
+          <div class="page-heading"><div><div class="eyebrow"><span class="eyebrow-line"></span> YOUR BUSINESS, AT A GLANCE</div><h1>Good work starts here<span class="heading-dot">.</span></h1><p>Less paperwork, more time for the work that matters.</p></div><button class="button button-dark new-document"><svg><use href="#i-plus"/></svg> New document</button></div>
+          <div class="welcome-banner"><div class="banner-copy"><span class="banner-label"><span>✦</span> MADE FOR THE WAY YOU WORK</span><h2>From first hello<br>to <em>job well done.</em></h2><p>Professional quotes and invoices, without the paperwork headache.</p><button class="banner-link new-document">Create your first document <svg><use href="#i-arrow"/></svg></button></div><div class="banner-art" aria-hidden="true"><div class="art-circle"></div><div class="art-paper"><div class="art-paper-top"><span class="art-logo">f.</span><span class="art-paper-title">QUOTE<br><small>FOR A JOB WELL DONE</small></span></div><div class="art-line wide"></div><div class="art-line"></div><div class="art-rule"></div><div class="art-row"><span></span><span></span></div><div class="art-row"><span></span><span></span></div><div class="art-row"><span></span><span></span></div><div class="art-total"><span>TOTAL</span><strong>$1,240.00</strong></div><div class="art-stamp">GOOD TO GO <span>✓</span></div></div><div class="art-star">✳</div><div class="art-squiggle">✦</div></div></div>
+          <div class="plan-card"><div><span class="section-kicker">FREE PLAN · LOCAL PREVIEW</span><strong id="plan-usage">0 of 5 quotes · 0 of 5 invoices this month</strong><p>Limits reset each calendar month on this device.</p></div><div><button type="button" class="button button-outline" id="upgrade-plan">Upgrade to unlimited</button><small>Billing will be available after hosting.</small></div></div>
+          <div class="ad-space" aria-label="Advertisement placeholder"><span>ADVERTISEMENT</span><strong>Your ad could go here</strong><small>Ad placement available when hosted</small></div>
+          <div class="section-title"><div><span class="section-kicker">THE BIG PICTURE</span><h2>Your overview</h2></div><span class="section-note">All documents, all time</span></div>
+          <div class="stats-grid">
+            <article class="stat-card"><div class="stat-top"><span>All documents</span><span class="stat-icon olive"><svg><use href="#i-file"/></svg></span></div><strong id="stat-documents">0</strong><p>Quotes and invoices created</p></article>
+            <article class="stat-card"><div class="stat-top"><span>Awaiting response</span><span class="stat-icon yellow"><svg><use href="#i-clock"/></svg></span></div><strong id="stat-pending">0</strong><p>Documents marked as sent</p></article>
+            <article class="stat-card"><div class="stat-top"><span>Paid invoices</span><span class="stat-icon green"><svg><use href="#i-check"/></svg></span></div><strong id="stat-paid">$0.00</strong><p>Manually marked as paid</p></article>
+          </div>
+          <div class="stats-grid insight-grid">
+            <article class="stat-card"><div class="stat-top"><span>Outstanding invoices</span><span class="stat-icon yellow"><svg><use href="#i-clock"/></svg></span></div><strong id="stat-outstanding">$0.00</strong><p>Sent invoices, less deposits received</p></article>
+            <article class="stat-card"><div class="stat-top"><span>Overdue invoices</span><span class="stat-icon yellow"><svg><use href="#i-clock"/></svg></span></div><strong id="stat-overdue">$0.00</strong><p id="stat-overdue-count">0 invoices past their due date</p></article>
+            <article class="stat-card"><div class="stat-top"><span>Quotes awaiting approval</span><span class="stat-icon olive"><svg><use href="#i-file"/></svg></span></div><strong id="stat-quotes">0</strong><p>Quotes manually marked as sent</p></article>
+          </div>
+          <div class="section-title recent-title"><div><span class="section-kicker">PICK UP WHERE YOU LEFT OFF</span><h2>Recent documents</h2></div><button class="text-button" data-view="documents">View all documents <svg><use href="#i-arrow"/></svg></button></div>
+          <div class="table-card"><div id="recent-documents"></div></div>
+        </section>
+
+        <section id="documents-view" class="view hidden">
+          <div class="page-heading"><div><div class="eyebrow"><span class="eyebrow-line"></span> ALL IN ONE PLACE</div><h1>Your documents<span class="heading-dot">.</span></h1><p>Keep track of every quote and invoice.</p></div><div class="heading-actions"><button class="button button-outline" id="open-bundle">Combine into PDF</button><button class="button button-dark new-document"><svg><use href="#i-plus"/></svg> New document</button></div></div>
+          <div class="table-card document-table"><div class="table-toolbar"><div class="tabs" role="group" aria-label="Filter documents"><button class="tab active" data-filter="all">All documents</button><button class="tab" data-filter="quote">Quotes</button><button class="tab" data-filter="invoice">Invoices</button></div><label class="search-box"><svg><use href="#i-search"/></svg><input id="document-search" type="search" placeholder="Search documents" aria-label="Search documents"></label></div><div id="all-documents"></div></div><div class="ad-space" aria-label="Advertisement placeholder"><span>ADVERTISEMENT</span><strong>Space for a future ad</strong><small>Ad placement available when hosted</small></div>
+        </section>
+
+        <section id="customers-view" class="view hidden">
+          <div class="page-heading"><div><div class="eyebrow"><span class="eyebrow-line"></span> PEOPLE YOU WORK WITH</div><h1>Your customers<span class="heading-dot">.</span></h1><p>Save customer details to reuse on future documents.</p></div></div>
+          <form id="customer-form" class="settings-card compact-form"><div class="form-grid"><label>Customer name<input name="name" required maxlength="120"></label><label>Email <span class="optional">optional</span><input name="email" type="email" maxlength="120"></label><label>Phone <span class="optional">optional</span><input name="phone" type="tel" maxlength="40"></label><label>Address <span class="optional">optional</span><input name="address" maxlength="240"></label></div><div class="compact-actions"><button type="button" class="button button-plain" id="cancel-customer" hidden>Cancel edit</button><button class="button button-dark" type="submit">Save customer</button></div></form>
+          <div id="customers-list" class="table-card"></div>
+        </section>
+
+        <section id="services-view" class="view hidden">
+          <div class="page-heading"><div><div class="eyebrow"><span class="eyebrow-line"></span> WORK YOU DO OFTEN</div><h1>Saved services<span class="heading-dot">.</span></h1><p>Keep common line items handy for your next job.</p></div></div>
+          <form id="service-form" class="settings-card compact-form"><div class="form-grid"><label>Description<input name="description" required maxlength="160" placeholder="e.g. Hourly labour"></label><label>Currency<select name="currency" class="currency-select"></select></label><label>Rate<input name="rate" type="number" min="0" max="1000000" step="0.01" required></label></div><div class="compact-actions"><button type="button" class="button button-plain" id="cancel-service" hidden>Cancel edit</button><button class="button button-dark" type="submit">Save service</button></div></form>
+          <div id="services-list" class="table-card"></div>
+        </section>
+
+        <section id="settings-view" class="view hidden">
+          <div class="page-heading"><div><div class="eyebrow"><span class="eyebrow-line"></span> MAKE IT YOURS</div><h1>Business settings<span class="heading-dot">.</span></h1><p>The details that make every document yours.</p></div></div>
+          <form id="settings-form" class="settings-card"><div class="card-heading"><div><h2>Business details</h2><p>These details appear on your quotes and invoices.</p></div><span class="settings-badge">YOUR BRAND</span></div><div class="settings-grid"><label>Business name<input name="businessName" maxlength="100" placeholder="e.g. Oak & Stone Services"></label><label>Email address<input name="businessEmail" type="email" maxlength="120" placeholder="hello@yourbusiness.ca"></label><label>Phone number<input name="businessPhone" type="tel" maxlength="40" placeholder="(416) 555-0123"></label><label>HST registration number <span class="optional">optional</span><input name="hstNumber" maxlength="40" placeholder="e.g. 123456789 RT0001"></label><label class="full-width">Business address<textarea name="businessAddress" rows="2" maxlength="240" placeholder="Street address, city, province and postal code"></textarea></label><div class="full-width logo-field"><div><label for="logo-input">Business logo <span class="optional">optional</span></label><p>PNG, JPG, or WebP up to 1 MB. Stored on this device.</p><input id="logo-input" type="file" accept="image/png,image/jpeg,image/webp"><button type="button" class="text-button remove-logo hidden" id="remove-logo">Remove logo</button></div><img id="logo-preview" class="logo-preview hidden" alt="Business logo preview"></div></div><div class="settings-footer"><p>Saved locally in this browser.</p><button class="button button-dark" type="submit">Save settings</button></div></form>
+          <form id="currency-form" class="settings-card compact-form currency-card"><div class="card-heading"><div><h2>Preferred currency</h2><p>Used for new documents and services. Existing documents keep their currency.</p></div></div><label>Currency<select name="currency" class="currency-select"></select></label><div class="compact-actions"><button type="submit" class="button button-dark">Save currency</button></div></form>
+          <div class="notice-card"><strong>Back up your workspace</strong><p>Export your documents, customers, services, and business settings to a JSON file. Restoring replaces this browser's current workspace, so export a backup first.</p><div class="backup-actions"><button type="button" class="button button-outline" id="export-backup">Export backup</button><button type="button" class="button button-outline" id="choose-backup">Restore backup</button><input id="import-backup" type="file" accept=".json,application/json" hidden></div></div>
+          <div class="notice-card"><strong>A note about your workspace</strong><p>Your documents are stored in this browser and are not synced automatically. Accounts, online approvals, automatic messages, and Stripe payments are not connected.</p></div>
+        </section>
+        <div class="footer-ad-grid" aria-label="Footer advertisement placeholders">
+          <div class="ad-space footer-ad" data-ad-slot="footer-1" aria-label="Footer advertisement placeholder 1"><span>ADVERTISEMENT</span><strong>Footer ad 1</strong><small>Available when hosted</small></div>
+          <div class="ad-space footer-ad" data-ad-slot="footer-2" aria-label="Footer advertisement placeholder 2"><span>ADVERTISEMENT</span><strong>Footer ad 2</strong><small>Available when hosted</small></div>
+          <div class="ad-space footer-ad" data-ad-slot="footer-3" aria-label="Footer advertisement placeholder 3"><span>ADVERTISEMENT</span><strong>Footer ad 3</strong><small>Available when hosted</small></div>
+        </div>
+        <footer class="page-footer"><span>Made for people who make things happen.</span><span>FIELDNOTE <b>✳</b></span></footer>
+      </div>
+      </div>
+    </main>
+  </div>
+
+  <dialog id="document-dialog" class="dialog editor-dialog">
+    <form id="document-form">
+      <div class="dialog-header"><div><span class="section-kicker">LET'S GET TO WORK</span><h2 id="editor-title">New document</h2><p>Create a document that looks as good as your work.</p></div><button type="button" class="icon-button close-dialog" aria-label="Close editor"><svg><use href="#i-close"/></svg></button></div>
+      <div class="dialog-body">
+        <div class="form-section"><div class="form-section-title"><span>01</span><div><h3>The essentials</h3><p>Who is this for and what are you sending?</p></div></div>
+          <div class="editor-logo logo-field"><div><label for="document-logo-input">Business logo <span class="optional">optional</span></label><p>Appears at the top left of your documents. PNG, JPG, or WebP up to 1 MB.</p><input id="document-logo-input" type="file" accept="image/png,image/jpeg,image/webp"><button type="button" class="text-button remove-logo hidden" id="remove-document-logo">Remove logo</button><p>Saving updates the business logo on all your documents.</p></div><img id="document-logo-preview" class="logo-preview hidden" alt="Business logo preview"></div>
+          <div class="form-grid document-options"><label>Currency<select name="currency" class="currency-select"></select><small class="field-help">Changing currency does not convert prices. Check the Ontario HST setting below.</small></label><label>Document design<select name="design"><option value="classic">Classic</option><option value="modern">Modern</option><option value="bold">Bold</option><option value="minimal">Minimal</option><option value="warm">Warm</option></select><small class="field-help">Applies to your preview, PDF, and JPEG.</small></label></div><p class="field-help type-help">A document’s type cannot be changed after saving. Use “Create invoice” to convert a quote.</p>
+          <div class="form-grid"><label>Document type<select name="type"><option value="quote">Quote</option><option value="invoice">Invoice</option></select></label><label>Document number<input name="number" required maxlength="40"></label><label>Use a saved customer <span class="optional">optional</span><select id="customer-select"><option value="">Select a customer</option></select></label><label>Customer name<input name="customer" required maxlength="120" placeholder="Customer or company name"></label><label>Customer email <span class="optional">optional</span><input name="customerEmail" type="email" maxlength="120"></label><label>Customer phone <span class="optional">optional</span><input name="phone" type="tel" maxlength="40" placeholder="For sharing a text message"></label><label class="full-width">Customer address <span class="optional">optional</span><textarea name="customerAddress" rows="2" maxlength="240"></textarea></label><label>Issue date<input name="issueDate" type="date" required></label><label>Due / valid until <span class="optional">optional</span><input name="dueDate" type="date"></label></div>
+        </div>
+        <div class="form-section"><div class="form-section-title"><span>02</span><div><h3>Line items</h3><p>Add the details of the work you're doing.</p></div></div><label class="service-picker">Add a saved service<select id="service-select"><option value="">Choose a service</option></select></label><div class="line-header"><span>DESCRIPTION</span><span>QTY</span><span>RATE</span><span>AMOUNT</span><span></span></div><div id="line-items"></div><button type="button" id="add-line" class="add-line"><svg><use href="#i-plus"/></svg> Add line item</button><div class="form-grid"><label>Discount type<select name="discountType"><option value="fixed">Fixed amount (CAD)</option><option value="percent">Percentage</option></select></label><label>Discount <span class="optional">before HST</span><input name="discountValue" type="number" min="0" max="1000000" step="0.01" value="0" required></label><label>Deposit received (CAD) <span class="optional">optional</span><input name="deposit" type="number" min="0" max="1000000" step="0.01" value="0" required></label><label>Payment terms <span class="optional">optional</span><input name="paymentTerms" maxlength="240" placeholder="e.g. Due within 30 days"></label></div><div class="totals-box"><div><span>Subtotal</span><strong id="form-subtotal">$0.00</strong></div><div><span>Discount</span><strong id="form-discount">$0.00</strong></div><div><label class="tax-label"><input name="applyHst" type="checkbox" checked> Ontario HST (13%)</label><strong id="form-tax">$0.00</strong></div><div><span>Total</span><strong id="form-total">$0.00</strong></div><div><span>Deposit received</span><strong id="form-deposit">$0.00</strong></div><div class="grand-total"><span>Balance due <small>CAD</small></span><strong id="form-balance">$0.00</strong></div></div></div>
+        <div class="form-section"><div class="form-section-title"><span>03</span><div><h3>A few final details</h3><p>Add a note or update the document status.</p></div></div><div class="form-grid"><label>Status<select name="status"><option value="draft">Draft</option><option value="sent">Sent</option><option value="approved">Approved</option><option value="paid">Paid</option></select><small class="field-help">Status changes are manual.</small></label><label class="full-width">Notes <span class="optional">optional</span><textarea name="notes" rows="3" maxlength="1000" placeholder="Add payment terms, a thank you, or anything else your customer should know."></textarea></label></div></div>
+      </div>
+      <div class="dialog-footer"><button type="button" class="button button-plain close-dialog">Cancel</button><button type="submit" class="button button-dark">Save document <svg><use href="#i-arrow"/></svg></button></div>
+    </form>
+  </dialog>
+
+  <dialog id="preview-dialog" class="dialog preview-dialog"><div class="dialog-header"><div><span class="section-kicker">LOOKING GOOD</span><h2>Document preview</h2><p>Review, print, or share your document.</p></div><button type="button" class="icon-button close-preview" aria-label="Close preview"><svg><use href="#i-close"/></svg></button></div><div class="preview-actions"><button class="button button-outline" id="edit-document"><svg><use href="#i-file"/></svg> Edit</button><button class="button button-outline" id="convert-invoice">Create invoice</button><button class="button button-outline" id="share-document"><svg><use href="#i-send"/></svg> Share details</button><button class="button button-outline" id="export-jpeg"><svg><use href="#i-download"/></svg> Save JPEG</button><button class="button button-dark" id="print-document"><svg><use href="#i-download"/></svg> Print / save PDF</button></div><div class="preview-scroll"><div id="printable-document"></div></div><div class="preview-note">Sharing opens your device's share options or text app. It does not send an approval link.</div></dialog>
+  <dialog id="bundle-dialog" class="dialog bundle-dialog"><div class="dialog-header"><div><span class="section-kicker">BETTER TOGETHER</span><h2>Combine documents</h2><p>Choose quotes and invoices to save in one PDF.</p></div><button type="button" class="icon-button" id="close-bundle" aria-label="Close combine documents"><svg><use href="#i-close"/></svg></button></div><div class="bundle-body"><div class="bundle-toolbar"><span id="bundle-count" aria-live="polite">0 selected</span><button type="button" class="text-button" id="bundle-select-all">Select all</button><button type="button" class="text-button" id="bundle-clear">Clear</button></div><div id="bundle-list" class="bundle-list"></div><p class="bundle-help">Each document starts on a new page. Choose “Save as PDF” in the print dialog.</p></div><div class="dialog-footer"><button type="button" class="button button-plain" id="cancel-bundle">Cancel</button><button type="button" class="button button-dark" id="print-bundle">Print / save PDF</button></div></dialog>
+  <div id="bundle-print" aria-hidden="true"></div>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+</body>
+</html>
